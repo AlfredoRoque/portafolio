@@ -1,1 +1,442 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: sans-serif;
+    background-image: url("assets/images/fondo.jpg");
+    background-size: 100% 50%;
+}
+
+@media (max-width: 600px) {
+    body{
+        background-size: 100% 25%;
+    }
+}
+
+/*FOOTER*/
+footer{
+    bottom: 0px;
+    width: 100%;
+}
+
+.cont-back{
+    background-color: transparent!important;
+}
+
+.last-back{
+    background-color: #2080A9!important;
+}
+
+.btn-net:hover{
+    ms-transform: scale(1.3);
+    o-transform: scale(1.3);
+    transform: scale(1.3);
+    webkit-transform: scale(1.3);
+}
+.btn-net{
+    font-size: medium!important;
+}
+.btn-net-facebook{
+    background-color: #0293F1!important;
+}
+.btn-net-youtube{
+    background-color: #F60002!important;
+}
+.btn-net-instagram{
+    background-color: #DF3B77!important;
+}
+.btn-net-twitter{
+    background-color: #61A3EA!important;
+}
+.btn-net-envelope{
+    background-color: #339AF0!important;
+}
+
+.container-contact{
+    border: 1px solid #2080A9!important;
+      border-radius: 5px;
+      width: 34%;
+      margin: 20px auto;
+}
+
+@media (max-width: 650px) {
+    .container-contact{
+        width: 82%;
+    }
+}
+
+/*FOOTER*/
+
+/*HEADER*/
+.bar-header{
+    padding: 0px 10px 0px 35px;
+    background-color: #2080A9!important;
+    opacity: 0.9!important;
+    -webkit-box-shadow: 0 6px 5px #2080A9!important;
+    -moz-box-shadow: 0 6px 5px #2080A9!important;
+    box-shadow: 0 6px 5px #2080A9!important;
+}
+
+/*logo*/
+.logo{
+    width: 55px;
+    height:55px;
+}
+/*media logo*/
+@media (max-width: 600px) {
+    .logo{
+        width: 45px;
+        height:45px;
+    }
+}
+/*media logo*/
+
+.hamburger{
+    background-color: #1C3144!important;
+}
+
+.bar-toggler-icon{
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/*logo*/
+
+.nav-link{
+    color: white!important;
+}
+
+/*HEADER*/
+
+/*PRINCIPAL CONTENT*/
+.first-component{
+    margin-top: 70px;
+}
+
+.content{
+    padding: 0 35px 0px 35px;
+}
+/*PRINCIPAL CONTENT*/
+
+/*PROFILE CARD*/
+.my-card{
+    width: 35rem!important;
+    margin: auto;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #2080A9!important;
+}
+
+.card-img-top{
+    width: 60%;
+    align-self: center;
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px;
+    color: white;
+}
+
+/*media card*/
+@media (max-width: 600px) {
+    .my-card{
+        width: 20rem!important;
+    }
+}
+/*media card*/
+
+/*PROFILE CARD*/
+
+/*HORIZONTAL LINE*/
+
+.horizontal-line{
+    height: 50px!important;
+    background-color: transparent;
+}
+
+/*HORIZONTAL LINE*/
+
+/*PROYECTS*/
+/*img proyects*/
+.img-proyect{
+   height: 250px;
+   width: 90%!important;
+}
+.img-proyect-1{
+    height: 250px;
+    width: 90%!important;
+    background-image: url("assets/images/webcamp.PNG");
+    background-size: 100% 100%;
+ }
+ .img-proyect-2{
+    height: 250px;
+    width: 90%!important;
+    background-image: url("assets/images/gestor_emp.PNG");
+    background-size: 100% 100%;
+ }
+ .img-proyect-3{
+    height: 250px;
+    width: 90%!important;
+    background-image: url("assets/images/poke.PNG");
+    background-size: 100% 100%;
+ }
+ .img-proyect-4{
+    height: 250px;
+    width: 90%!important;
+    background-image: url("assets/images/admin.PNG");
+    background-size: 100% 100%;
+ }
+ .img-proyect-5{
+    height: 250px;
+    width: 90%!important;
+    background-image: url("assets/images/crypto.PNG");
+    background-size: 100% 100%;
+ }
+ .img-proyect-6{
+    height: 250px;
+    width: 90%!important;
+    background-image: url("assets/images/siaf.PNG");
+    background-size: 100% 100%;
+ }
+/*img proyects*/
+
+/*container proyects*/
+.proyects{
+    margin: 70px 0px 30px 15px;
+    border: 1px solid #2080A9!important;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .proyects{
+        margin: 70px 20px 30px 15px;
+    }
+}
+/*container proyects*/
+
+/*links proyects*/
+.link-proyect{
+    position: relative;
+    top: 90%;
+    text-align: center;
+}
+.link-proyect:hover{
+    background-color: black;
+}
+.link-proyect-a{
+    color: #C6C7C8;
+}
+.link-proyect-a:hover{
+    color: grey;
+    opacity: 1;
+}
+
+.proyect{
+    margin-bottom: 35px!important;
+}
+
+/*links proyects*/
+
+/*PROYECTS*/
+
+/*TECH*/
+a.btn-social,
+.btn-social
+{
+    border-radius: 50%;
+    color: #ffffff !important;
+    display: inline-block;
+    height: 80px;
+    line-height: 54px;
+    margin: 8px 4px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s;
+    webkit-transition: background-color .3s;
+    width: 80px;
+    font-size: 45px;
+}
+
+.icon-center {
+    vertical-align: sub;
+}
+
+.icon-img-center{
+    vertical-align: -webkit-baseline-middle;
+    margin-bottom: 10px;
+}
+
+.btn-social .fa,.btn-social i,.icon-img-center
+{
+    backface-visibility: hidden;
+    moz-backface-visibility: hidden;
+    ms-transform: scale(1);
+    o-transform: scale(1);
+    transform: scale(1);
+    transition: all .25s;
+    webkit-backface-visibility: hidden;
+    webkit-transform: scale(1);
+    webkit-transition: all .25s;
+}
+.btn-social:hover,.btn-social:focus
+{
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+.btn-social:hover .fa,.btn-social:focus .fa,.btn-social:hover i,.btn-social:focus i,.icon-img-center:hover
+{
+    ms-transform: scale(1.3);
+    o-transform: scale(1.3);
+    transform: scale(1.3);
+    webkit-transform: scale(1.3);
+}
+.btn-social.btn-xs
+{
+    font-size: 9px;
+    height: 24px;
+    line-height: 13px;
+    margin: 6px 2px;
+    width: 24px;
+}
+.btn-social.btn-sm
+{
+    font-size: 13px;
+    height: 36px;
+    line-height: 18px;
+    margin: 6px 2px;
+    width: 36px;
+}
+.btn-social.btn-lg
+{
+    font-size: 22px;
+    height: 72px;
+    line-height: 40px;
+    margin: 10px 6px;
+    width: 72px;
+}
+
+.btn-html
+{
+    background-color: #E96228;
+}
+.btn-html:hover
+{
+    background-color: #E95100;
+}
+.btn-js
+{
+    background-color: #EFD81D;
+}
+.btn-js:hover
+{
+    background-color: #EFD30D;
+}
+.btn-java
+{
+    background-color: #B0D0DE;
+}
+.btn-java:hover
+{
+    background-color: #90D0DE;
+}
+.btn-typescript
+{
+    background-color: #2F74C0;
+}
+.btn-typescript:hover
+{
+    background-color: #2A6BAF;
+}
+.btn-angular
+{
+    background-color: #D6002F;
+}
+.btn-angular:hover
+{
+    background-color: #BD002E;
+}
+.btn-css3
+{
+    background-color: #369FD0;
+}
+.btn-css3:hover
+{
+    background-color: #006DB7;
+}
+.btn-mysql
+{
+    background-color: #DD8A00;
+}
+.btn-mysql:hover
+{
+    background-color: #005E86;
+}
+.btn-postgresql
+{
+    background-color: #426BA0;
+}
+.btn-postgresql:hover
+{
+    background-color: #3262A2;
+}
+.btn-spring
+{
+    background-color: #73B61E;
+}
+.btn-spring:hover
+{
+    background-color: #73B61E;
+}
+.btn-python
+{
+    background-color: #F6D145;
+}
+.btn-python:hover
+{
+    background-color: #356FA0;
+}
+.btn-php
+{
+    background-color: #7377AD;
+}
+.btn-php:hover
+{
+    background-color: #464A85;
+}
+.btn-django
+{
+    background-color: hsl(155, 93%, 21%);
+}
+.btn-django:hover
+{
+    background-color: #002918;
+}
+
+.tech{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0 40px 0;
+    border: 1px solid #2080A9!important;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    margin-top: 75px;
+}
+
+.sub-tech{
+    place-content: center;
+}
+
+.tech-list{
+    width: 50%;
+}
+
+/*media tech*/
+@media (max-width: 600px) {
+    .tech-list {
+        width: 100%;
+    }
+}
+/*media tech*/
+
+/*TECH*/

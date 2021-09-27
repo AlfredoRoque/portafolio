@@ -167,36 +167,64 @@ footer{
     width: 90%!important;
     background-image: url("assets/images/webcamp.PNG");
     background-size: 100% 100%;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
  }
  .img-proyect-2{
     height: 250px;
     width: 90%!important;
     background-image: url("assets/images/gestor_emp.PNG");
     background-size: 100% 100%;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
  }
  .img-proyect-3{
     height: 250px;
     width: 90%!important;
     background-image: url("assets/images/poke.PNG");
     background-size: 100% 100%;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
  }
  .img-proyect-4{
     height: 250px;
     width: 90%!important;
     background-image: url("assets/images/admin.PNG");
     background-size: 100% 100%;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
  }
  .img-proyect-5{
     height: 250px;
     width: 90%!important;
     background-image: url("assets/images/crypto.PNG");
     background-size: 100% 100%;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
  }
  .img-proyect-6{
     height: 250px;
     width: 90%!important;
     background-image: url("assets/images/siaf.PNG");
     background-size: 100% 100%;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
+ }
+ .img-proyect-1:hover,.img-proyect-2:hover,.img-proyect-3:hover,.img-proyect-4:hover,
+ .img-proyect-5:hover,.img-proyect-6:hover{
+    -webkit-filter: none; /* Webkit */
+    filter: none; /* IE6-9 */
+    filter: none; /* W3C */
+    ms-transform: scale(1.04);
+    o-transform: scale(1.04);
+    transform: scale(1.04);
+    webkit-transform: scale(1.04);
  }
 /*img proyects*/
 

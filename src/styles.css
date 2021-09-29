@@ -25,6 +25,7 @@ footer{
 
 .last-back{
     background-color: #2080A9!important;
+    opacity: 0.9;
 }
 
 .btn-net:hover{
@@ -53,7 +54,7 @@ footer{
 }
 
 .container-contact{
-    border: 1px solid #2080A9!important;
+    border: 1px solid rgb(32,128,169,0.4)!important;
       border-radius: 5px;
       width: 34%;
       margin: 20px auto;
@@ -159,7 +160,7 @@ footer{
     margin: auto;
     background-color: transparent;
     color: white;
-    border: 1px solid #2080A9!important;
+    border: 1px solid rgb(32,128,169,0.4)!important;
 }
 
 .card-img-top{
@@ -280,7 +281,7 @@ footer{
 /*container proyects*/
 .proyects{
     margin: 70px 0px 30px 15px;
-    border: 1px solid #2080A9!important;
+    border: 1px solid rgb(32,128,169,0.4)!important;
     border-radius: 5px;
 }
 
@@ -499,7 +500,7 @@ a.btn-social,
     width: 100%;
     text-align: center;
     padding: 30px 0 40px 0;
-    border: 1px solid #2080A9!important;
+    border: 1px solid rgb(32,128,169,0.4)!important;
     border-radius: 5px;
     margin-bottom: 40px;
     margin-top: 75px;

@@ -17,7 +17,7 @@ addEventListener('load',()=>{
                 lenguage.classList.remove("flag-es");
                 lenguage.classList.add("flag-en");
                 location.href = 'en';
-           }
+           } 
         });
 }
 });

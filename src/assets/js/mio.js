@@ -9,13 +9,14 @@ addEventListener('load',()=>{
         const lenguage = document.getElementById("lenguage");
         if(lenguage!=null){
            lenguage.addEventListener("change",(a)=>{
-           console.log(lenguage.value);
            if(lenguage.value == 'es'){
                 lenguage.classList.remove("flag-en");
                 lenguage.classList.add("flag-es");
+                location.href = '/';
            }else if(lenguage.value == 'en'){
                 lenguage.classList.remove("flag-es");
                 lenguage.classList.add("flag-en");
+                location.href = 'en';
            }
         });
 }

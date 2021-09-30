@@ -16,17 +16,18 @@
         <a (click)="isCollapsed = true" class="nav-link" href="#tech">Conocimientos</a>
       </li>
       <li class="nav-item">
-        <a id="cv" (click)="isCollapsed = true" class="nav-link" href="#">Curriculum <i class="far fa-arrow-alt-circle-down"></i></a>
+        <a id="cv" (click)="isCollapsed = true" class="nav-link" href="#">CV <i class="far fa-arrow-alt-circle-down"></i></a>
       </li>
       <li class="nav-item">
         <a (click)="isCollapsed = true" class="nav-link" href="#contacto">Contacto</a>
       </li>
     </ul>
     <div class="nav-item">
-      <select id="lenguage" class="flag flag-es">
-        <option style="background-color: #2080A9;" selected value="es" >ES</option>
-        <option style="background-color: #2080A9;" value="en">EN</option>
+      <select ng-model="lenguage" id="lenguage" class="flag flag-es">
+        <option style="background-color: #2080A9;" selected value="es"><a routerLink="/">ES</a></option>
+        <option style="background-color: #2080A9;" value="en"><a routerLink="en">EN</a></option>
       </select>
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet>

@@ -11,7 +11,7 @@ export class AppcomponentEnComponent implements OnInit {
   ngOnInit() {
     var URLactual = window.location.pathname.replace("/","");
     if(URLactual!=""){
-      this.lenguage = URLactual;
+      this.lenguage = URLactual; 
     }
   }
 

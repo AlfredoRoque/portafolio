@@ -12,7 +12,6 @@ export class AppComponent{
 
   ngOnInit() {
     var URLactual = window.location.pathname.replace("/","");
-    console.log(URLactual);
     if(URLactual!=""){
       this.lenguage = URLactual;
     }

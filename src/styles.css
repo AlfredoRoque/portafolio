@@ -40,14 +40,21 @@ footer{
 .btn-net-facebook{
     background-color: #0293F1!important;
 }
-.btn-net-youtube{
-    background-color: #F60002!important;
+.btn-net-linkedin{
+    background-color: #0B65C2!important;
 }
 .btn-net-instagram{
     background-color: #DF3B77!important;
 }
 .btn-net-twitter{
-    background-color: #61A3EA!important;
+    background-color: black!important;
+}
+.fa-twitter{
+	font-family:sans-serif;
+}
+.fa-twitter::before{
+	content:"𝕏";
+	font-size:1.2em;
 }
 .btn-net-envelope{
     background-color: #339AF0!important;

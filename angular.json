@@ -30,10 +30,6 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/js/mio.js"
             ],
             "browser": "src/main.ts"
           },
@@ -69,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "portafolio:build"
+            "buildTarget": "portafolio:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "portafolio:build:production"
+              "buildTarget": "portafolio:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portafolio:build"
+            "buildTarget": "portafolio:build"
           }
         },
         "test": {

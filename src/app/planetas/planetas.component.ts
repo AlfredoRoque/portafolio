@@ -237,7 +237,7 @@ export class Planet3D {
 
 const orbitGeometry = new THREE.BufferGeometry().setFromPoints(points);
 const orbitMaterial = new THREE.LineBasicMaterial({
-      color: 0x444444,
+      color: 0xffffff,
       transparent: true,
       opacity: 0.2
     });

@@ -83,10 +83,11 @@ footer{
 }
 
 .container-contact{
-    border: 1px solid rgb(32,128,169,0.4)!important;
+    border: 2px solid rgb(32,128,169,0.06)!important;
       border-radius: 5px;
-      width: 34%;
+      width: 96%;
       margin: 20px auto;
+      margin-top: 100px;
 }
 
 @media (max-width: 650px) {
@@ -189,7 +190,7 @@ footer{
     margin: auto;
     background-color: transparent;
     color: white;
-    border: 1px solid rgb(32,128,169,0.4)!important;
+    border: 2px solid rgb(32,128,169,0.06)!important;
 }
 
 .card-img-top{
@@ -310,7 +311,7 @@ footer{
 /*container proyects*/
 .proyects{
     margin: 70px 0px 30px 0px;
-    border: 1px solid rgb(32,128,169,0.4)!important;
+    border: 2px solid rgb(32,128,169,0.06)!important;
     border-radius: 5px;
 }
 
@@ -332,15 +333,14 @@ footer{
     top: 90%;
     text-align: center;
 }
-.link-proyect:hover{
-    background-color: black;
-}
 .link-proyect-a{
-    color: #C6C7C8;
+    color: rgb(0, 75, 166);
 }
 .link-proyect-a:hover{
-    color: grey;
-    opacity: 1;
+    color: rgb(1, 26, 56);
+}
+.icon-action:hover{
+    opacity: 1!important;
 }
 
 .proyect{
@@ -376,6 +376,13 @@ a.btn-social,
 .icon-img-center{
     vertical-align: -webkit-baseline-middle;
     margin-bottom: 10px;
+}
+
+.icon-action{
+    font-size: 35px; 
+    padding: 0px 10px 0px 0px; 
+    margin: -8px 0px 0px 0px; 
+    opacity: 0.70;
 }
 
 .btn-social .fa,.btn-social i,.icon-img-center

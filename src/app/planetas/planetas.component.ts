@@ -239,7 +239,7 @@ const orbitGeometry = new THREE.BufferGeometry().setFromPoints(points);
 const orbitMaterial = new THREE.LineBasicMaterial({
       color: 0xffffff,
       transparent: true,
-      opacity: 0.2
+      opacity: 0.06
     });
 
 this.orbitLine = new THREE.LineLoop(orbitGeometry, orbitMaterial);

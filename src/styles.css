@@ -287,14 +287,14 @@ footer{
 
 /*container proyects*/
 .proyects{
-    margin: 70px 0px 30px 15px;
+    margin: 70px 0px 30px 0px;
     border: 1px solid rgb(32,128,169,0.4)!important;
     border-radius: 5px;
 }
 
 @media (max-width: 600px) {
     .proyects{
-        margin: 70px 20px 30px 15px;
+        margin: 70px 20px 30px 0px;
     }
 }
 @media (max-width: 350px) {
@@ -509,8 +509,6 @@ a.btn-social,
     padding: 30px 0 40px 0;
     border: 1px solid rgb(32,128,169,0.4)!important;
     border-radius: 5px;
-    margin-bottom: 40px;
-    margin-top: 75px;
 }
 
 .sub-tech{

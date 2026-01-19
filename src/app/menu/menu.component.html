@@ -4,87 +4,20 @@
         {{portafolio}}
     </h1>
     <div class="row" style="margin: 0px 0px 15px 20px;">
-        <div class="proyect col-lg-4 mb-4 mb-lg-2">
-            <div class="w-100 shadow-1-strong rounded mb-2 img-proyect-1">
-                <div class="link-proyect">
-                    <a target="_blanck" title="Repositorio" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://github.com/AlfredoRoque/webpag">
-                        <i class="icon-action fa-brands fa-github"></i>
-                    </a>
-                    <a target="_blanck" title="Muestra" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://webcamp-dev.herokuapp.com/">
-                        <i class="icon-action fa-solid fa-right-from-bracket"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="proyect col-lg-4 mb-4 mb-lg-2">
-            <div class="w-100 shadow-1-strong rounded mb-2 img-proyect-6">
-                <div class="link-proyect">
-                    <a target="_blanck" title="Muestra" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://webcamp-dev.herokuapp.com/">
-                        <i class="icon-action fa-solid fa-right-from-bracket"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="proyect col-lg-4 mb-4 mb-lg-2">
-            <div class="w-100 shadow-1-strong rounded mb-2 img-proyect-2">
-                <div class="link-proyect">
-                    <a target="_blanck" title="Repositorio" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://github.com/AlfredoRoque/webpag">
-                        <i class="icon-action fa-brands fa-github"></i>
-                    </a>
-                    <a target="_blanck" title="Muestra" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://webcamp-dev.herokuapp.com/">
-                        <i class="icon-action fa-solid fa-right-from-bracket"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="proyect col-lg-4 mb-4 mb-lg-2">
-            <div class="w-100 shadow-1-strong rounded mb-2 img-proyect-3">
-                <div class="link-proyect">
-                    <a target="_blanck" title="Repositorio" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://github.com/AlfredoRoque/webpag">
-                        <i class="icon-action fa-brands fa-github"></i>
-                    </a>
-                    <a target="_blanck" title="Muestra" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://webcamp-dev.herokuapp.com/">
-                        <i class="icon-action fa-solid fa-right-from-bracket"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="proyect col-lg-4 mb-4 mb-lg-2">
-            <div class="w-100 shadow-1-strong rounded mb-2 img-proyect-4">
-                <div class="link-proyect">
-                    <a target="_blanck" title="Repositorio" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://github.com/AlfredoRoque/webpag">
-                        <i class="icon-action fa-brands fa-github"></i>
-                    </a>
-                    <a target="_blanck" title="Muestra" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://webcamp-dev.herokuapp.com/">
-                        <i class="icon-action fa-solid fa-right-from-bracket"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="proyect col-lg-4 mb-4 mb-lg-2">
-            <div class="w-100 shadow-1-strong rounded mb-2 img-proyect-5">
-                <div class="link-proyect">
-                    <a target="_blanck" title="Repositorio" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://github.com/AlfredoRoque/webpag">
-                        <i class="icon-action fa-brands fa-github"></i>
-                    </a>
-                    <a target="_blanck" title="Muestra" class="link-proyect-a" style="text-decoration: none;"
-                        href="https://webcamp-dev.herokuapp.com/">
-                        <i class="icon-action fa-solid fa-right-from-bracket"></i>
-                    </a>
+        <div class="gallery">
+            <div *ngFor="let image of images" class="proyect">
+                <div class="w-100 shadow-1-strong rounded mb-2">
+                    <img [src]="image" alt="Imagen" loading="lazy" class="img-proyect" />
+                    <div class="link-proyect">
+                        <a target="_blanck" title="Repositorio" class="link-proyect-a" style="text-decoration: none;"
+                            href="https://github.com/AlfredoRoque/webpag">
+                            <i class="icon-action fa-brands fa-github"></i>
+                        </a>
+                        <a target="_blanck" title="Muestra" class="link-proyect-a" style="text-decoration: none;"
+                            href="https://webcamp-dev.herokuapp.com/">
+                            <i class="icon-action fa-solid fa-right-from-bracket"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

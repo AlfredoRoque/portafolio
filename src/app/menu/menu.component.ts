@@ -16,4 +16,12 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  images: string[] = [
+    '../../assets/images/webcamp.PNG',
+    '../../assets/images/gestor_emp.PNG',
+    '../../assets/images/poke.PNG',
+    '../../assets/images/admin.PNG',
+    '../../assets/images/crypto.PNG',
+    '../../assets/images/siaf.PNG',
+  ];
 }

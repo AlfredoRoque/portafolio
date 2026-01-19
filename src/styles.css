@@ -19,6 +19,10 @@ html, body {
   overflow-x: hidden;
 }
 
+.bar-header-size{
+    height: 50px!important;
+}
+
 #space-bg {
   position: fixed;
   inset: 0;
@@ -59,24 +63,8 @@ footer{
 .btn-net{
     font-size: medium!important;
 }
-.btn-net-facebook{
-    background-color: #0293F1!important;
-}
 .btn-net-linkedin{
     background-color: #0B65C2!important;
-}
-.btn-net-instagram{
-    background-color: #DF3B77!important;
-}
-.btn-net-twitter{
-    background-color: black!important;
-}
-.fa-twitter{
-	font-family:sans-serif;
-}
-.fa-twitter::before{
-	content:"𝕏";
-	font-size:1.2em;
 }
 .btn-net-envelope{
     background-color: #339AF0!important;
@@ -131,12 +119,6 @@ footer{
     color: white;
 }
 
-.flag-es{
-    background-image: url(https://img.icons8.com/emoji/45/000000/mexico-emoji.png);
-}
-.flag-en{
-    background-image: url(https://img.icons8.com/emoji/45/000000/united-kingdom-emoji.png);
-}
 /*logo*/
 .logo{
     width: 55px;
@@ -233,71 +215,12 @@ footer{
 /*PROYECTS*/
 /*img proyects*/
 .img-proyect{
-   height: 250px;
-   width: 90%!important;
-}
-.img-proyect-1{
-    height: 250px;
-    width: 90%!important;
-    background-image: url("assets/images/webcamp.PNG");
-    background-size: 100% 100%;
     -webkit-filter: grayscale(1); /* Webkit */
     filter: gray; /* IE6-9 */
     filter: grayscale(1); /* W3C */
     border-radius: var(--img-proyects--radius)!important;
  }
- .img-proyect-2{
-    height: 250px;
-    width: 90%!important;
-    background-image: url("assets/images/gestor_emp.PNG");
-    background-size: 100% 100%;
-    -webkit-filter: grayscale(1); /* Webkit */
-    filter: gray; /* IE6-9 */
-    filter: grayscale(1); /* W3C */
-    border-radius: var(--img-proyects--radius)!important;
- }
- .img-proyect-3{
-    height: 250px;
-    width: 90%!important;
-    background-image: url("assets/images/poke.PNG");
-    background-size: 100% 100%;
-    -webkit-filter: grayscale(1); /* Webkit */
-    filter: gray; /* IE6-9 */
-    filter: grayscale(1); /* W3C */
-    border-radius: var(--img-proyects--radius)!important;
- }
- .img-proyect-4{
-    height: 250px;
-    width: 90%!important;
-    background-image: url("assets/images/admin.PNG");
-    background-size: 100% 100%;
-    -webkit-filter: grayscale(1); /* Webkit */
-    filter: gray; /* IE6-9 */
-    filter: grayscale(1); /* W3C */
-    border-radius: var(--img-proyects--radius)!important;
- }
- .img-proyect-5{
-    height: 250px;
-    width: 90%!important;
-    background-image: url("assets/images/crypto.PNG");
-    background-size: 100% 100%;
-    -webkit-filter: grayscale(1); /* Webkit */
-    filter: gray; /* IE6-9 */
-    filter: grayscale(1); /* W3C */
-    border-radius: var(--img-proyects--radius)!important;
- }
- .img-proyect-6{
-    height: 250px;
-    width: 90%!important;
-    background-image: url("assets/images/siaf.PNG");
-    background-size: 100% 100%;
-    -webkit-filter: grayscale(1); /* Webkit */
-    filter: gray; /* IE6-9 */
-    filter: grayscale(1); /* W3C */
-    border-radius: var(--img-proyects--radius)!important;
- }
- .img-proyect-1:hover,.img-proyect-2:hover,.img-proyect-3:hover,.img-proyect-4:hover,
- .img-proyect-5:hover,.img-proyect-6:hover{
+ .img-proyect:hover{
     -webkit-filter: none; /* Webkit */
     filter: none; /* IE6-9 */
     filter: none; /* W3C */
@@ -306,6 +229,10 @@ footer{
     transform: scale(1.04);
     webkit-transform: scale(1.04);
  }
+
+ .proyect:hover .link-proyect-a {
+  color: rgb(0, 75, 166);
+}
 /*img proyects*/
 
 /*container proyects*/
@@ -329,12 +256,14 @@ footer{
 
 /*links proyects*/
 .link-proyect{
+    width: 25%;
     position: relative;
     top: 90%;
     text-align: center;
+    margin: -25px 0px 0px 170px;
 }
 .link-proyect-a{
-    color: rgb(0, 75, 166);
+    color: gray;
 }
 .link-proyect-a:hover{
     color: rgb(1, 26, 56);
@@ -556,3 +485,33 @@ a.btn-social,
 /*media tech*/
 
 /*TECH*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery img {
+  width: 90%;
+  height: 235px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive automático */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

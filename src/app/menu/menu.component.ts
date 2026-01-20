@@ -10,18 +10,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  
   portafolio = "{ Portafolio }"
   constructor() { }
 
   ngOnInit() {
   }
 
-  images: string[] = [
-    '../../assets/images/webcamp.PNG',
-    '../../assets/images/gestor_emp.PNG',
-    '../../assets/images/poke.PNG',
-    '../../assets/images/admin.PNG',
-    '../../assets/images/crypto.PNG',
-    '../../assets/images/siaf.PNG',
+  proyects:ProyectData[] = [
+    new ProyectData('https://github.com/AlfredoRoque/webpag','https://webcamp-dev.herokuapp.com/', '../../assets/images/webcamp.PNG'),
+    new ProyectData('https://github.com/AlfredoRoque/examen','https://examen-22.herokuapp.com/','../../assets/images/gestor_emp.PNG'),
+    new ProyectData('https://github.com/AlfredoRoque/pokedex','https://pokedex-inc.herokuapp.com/','../../assets/images/poke.PNG'),
+    new ProyectData('https://admin-projects.herokuapp.com/login.php','https://github.com/AlfredoRoque/administradorTareas','../../assets/images/admin.PNG'),
+    new ProyectData('https://github.com/AlfredoRoque/CryptoCoins/tree/main','https://crypto.rorideas.com/','../../assets/images/crypto.PNG'),
+    new ProyectData('','https://siaf.puebla.gob.mx/','../../assets/images/siaf.PNG'),
   ];
+
+
 }
+
+class ProyectData {
+      constructor(
+        public linkRepository: string,
+        public linkProject: string,
+        public imagesPath: string,
+      ) {}
+  }

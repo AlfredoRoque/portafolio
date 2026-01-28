@@ -1,0 +1,116 @@
+<router-outlet></router-outlet>
+<mat-card class="card">
+    <h2>Sistema de Ecuaciones</h2>
+
+    <form [formGroup]="systemForm" (ngSubmit)="submit()">
+
+        <mat-radio-group formControlName="type" class="selector">
+            <mat-radio-button value="2x2">2 × 2</mat-radio-button>
+            <mat-radio-button value="3x3">3 × 3</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-radio-group formControlName="method" class="selector">
+            <mat-radio-button value="sustitucion">Sustitucion</mat-radio-button>
+            <mat-radio-button value="suma_resta">Suma y Resta</mat-radio-button>
+            <mat-radio-button value="determinantes">Determinantes</mat-radio-button>
+            <mat-radio-button value="igualacion">Igualacion</mat-radio-button>
+        </mat-radio-group>
+
+        <!-- 2x2 -->
+        <div *ngIf="systemForm.value.type === '2x2'" class="matrix">
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" placeholder="x₁" formControlName="x1">
+                    <mat-error *ngIf="systemForm.get('x1')?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" placeholder="y₁" formControlName="y1">
+                    <mat-error *ngIf="systemForm.get('y1')?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <span>=</span>
+
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" placeholder="r₁" formControlName="r1">
+                    <mat-error *ngIf="systemForm.get('r1')?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" placeholder="x₂" formControlName="x2">
+                    <mat-error *ngIf="systemForm.get('x2')?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" placeholder="y₂" formControlName="y2">
+                    <mat-error *ngIf="systemForm.get('y2')?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <span>=</span>
+
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" placeholder="r₂" formControlName="r2">
+                    <mat-error *ngIf="systemForm.get('r2')?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <!-- 3x3 -->
+        <div *ngIf="systemForm.value.type === '3x3'" class="matrix">
+            <div class="row" *ngFor="let r of [1,2,3]; let i = index">
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" [placeholder]="'x' + (i + 1)" [formControlName]="'x' + (i + 3)">
+                    <mat-error *ngIf="systemForm.get('x' + (i + 3))?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" [placeholder]="'y' + (i + 1)" [formControlName]="'y' + (i + 3)">
+                    <mat-error *ngIf="systemForm.get('y' + (i + 3))?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" [placeholder]="'z' + (i + 1)" [formControlName]="'z' + (i + 1)">
+                    <mat-error *ngIf="systemForm.get('z' + (i + 1))?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <span>=</span>
+
+                <mat-form-field appearance="outline">
+                    <input matInput type="number" [placeholder]="'r' + (i + 1)" [formControlName]="'r' + (i + 3)">
+                    <mat-error *ngIf="systemForm.get('r' + (i + 3))?.hasError('required')">
+                        Campo obligatorio
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <button mat-raised-button color="primary" type="submit" [disabled]="systemForm.invalid || loading">
+            Resolver
+        </button>
+
+    </form>
+</mat-card>
+<!-- Cargando -->
+<mat-card *ngIf="loading" class="result-card">
+    <p>Resolviendo sistema...</p>
+</mat-card>

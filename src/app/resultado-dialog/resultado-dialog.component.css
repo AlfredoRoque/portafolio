@@ -1,0 +1,10 @@
+.resultado {
+white-space: pre-wrap;
+font-family: monospace;
+line-height: 1.5;
+font-size: 0.9rem;
+}
+
+.contenedor-principal{
+    background: rgb(201, 204, 174);
+}

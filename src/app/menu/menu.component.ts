@@ -21,6 +21,7 @@ export class MenuComponent implements OnInit {
     new ProyectData('https://github.com/AlfredoRoque/webpag','https://landing-page.rorideas.com/', '../../assets/images/webcamp.PNG'),
     new ProyectData('','https://siaf.puebla.gob.mx/','../../assets/images/siaf.PNG'),
     new ProyectData('https://github.com/AlfredoRoque/CryptoCoins/tree/main','https://crypto.rorideas.com/','../../assets/images/crypto.PNG'),
+    new ProyectData('https://github.com/AlfredoRoque/api-sistema-ecuaciones/tree/version-1','https://rorideas.com/sistema-ecuaciones','../../assets/images/ecuaciones.png'),
     new ProyectData('https://github.com/AlfredoRoque/examen','https://cucas.pythonanywhere.com/','../../assets/images/gestor_emp.PNG'),
     new ProyectData('https://github.com/AlfredoRoque/pokedex','https://poke.rorideas.com/','../../assets/images/poke.PNG'),
     new ProyectData('https://github.com/AlfredoRoque/administradorTareas','https://task-administrator.rorideas.com/','../../assets/images/admin.PNG')

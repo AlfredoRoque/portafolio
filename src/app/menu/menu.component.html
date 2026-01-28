@@ -7,6 +7,7 @@
         <div class="gallery">
             <div *ngFor="let proyect of proyects" class="proyect">
                 <div *ngIf="proyect.imagesPath !== ''" class="w-100 shadow-1-strong rounded mb-2">
+                    <h3 class="title">{{proyect.name}}</h3>
                     <img [src]="proyect.imagesPath" alt="Imagen" loading="lazy" class="img-proyect" />
                     <div class="link-proyect">
                         <a *ngIf="proyect.linkRepository !== ''" target="_blanck" title="Repositorio" class="link-proyect-a" style="text-decoration: none;"

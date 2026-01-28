@@ -18,13 +18,13 @@ export class MenuComponent implements OnInit {
   }
 
   proyects:ProyectData[] = [
-    new ProyectData('https://github.com/AlfredoRoque/webpag','https://landing-page.rorideas.com/', '../../assets/images/webcamp.PNG'),
-    new ProyectData('','https://siaf.puebla.gob.mx/','../../assets/images/siaf.PNG'),
-    new ProyectData('https://github.com/AlfredoRoque/CryptoCoins/tree/main','https://crypto.rorideas.com/','../../assets/images/crypto.PNG'),
-    new ProyectData('https://github.com/AlfredoRoque/api-sistema-ecuaciones/tree/version-1','https://rorideas.com/sistema-ecuaciones','../../assets/images/ecuaciones.png'),
-    new ProyectData('https://github.com/AlfredoRoque/examen','https://cucas.pythonanywhere.com/','../../assets/images/gestor_emp.PNG'),
-    new ProyectData('https://github.com/AlfredoRoque/pokedex','https://poke.rorideas.com/','../../assets/images/poke.PNG'),
-    new ProyectData('https://github.com/AlfredoRoque/administradorTareas','https://task-administrator.rorideas.com/','../../assets/images/admin.PNG')
+    new ProyectData('https://github.com/AlfredoRoque/webpag','https://landing-page.rorideas.com/', '../../assets/images/webcamp.PNG', 'Landing Page WebCamp'),
+    new ProyectData('','https://siaf.puebla.gob.mx/','../../assets/images/siaf.PNG', 'SIAF Puebla'),
+    new ProyectData('https://github.com/AlfredoRoque/CryptoCoins/tree/main','https://crypto.rorideas.com/','../../assets/images/crypto.PNG', 'Crypto Coins'),
+    new ProyectData('https://github.com/AlfredoRoque/api-sistema-ecuaciones/tree/version-1','https://rorideas.com/sistema-ecuaciones','../../assets/images/ecuaciones.png', 'Sistema de Ecuaciones'),
+    new ProyectData('https://github.com/AlfredoRoque/examen','https://cucas.pythonanywhere.com/','../../assets/images/gestor_emp.PNG', 'Gestor de Empleados'),
+    new ProyectData('https://github.com/AlfredoRoque/pokedex','https://poke.rorideas.com/','../../assets/images/poke.PNG', 'Pokedex'),
+    new ProyectData('https://github.com/AlfredoRoque/administradorTareas','https://task-administrator.rorideas.com/','../../assets/images/admin.PNG', 'Administrador de Tareas')
   ];
 
 
@@ -35,5 +35,6 @@ class ProyectData {
         public linkRepository: string,
         public linkProject: string,
         public imagesPath: string,
+        public name: string,
       ) {}
   }

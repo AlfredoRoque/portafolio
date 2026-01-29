@@ -1,5 +1,9 @@
 <router-outlet></router-outlet>
 <mat-card class="card">
+    <button mat-raised-button class="btn-success" (click)="descargarVersionEscritorio()">
+        Descargar versión de escritorio
+    </button>
+
     <h2>Sistema de Ecuaciones</h2>
 
     <form [formGroup]="systemForm" (ngSubmit)="submit()">

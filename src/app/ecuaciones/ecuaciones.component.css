@@ -55,3 +55,14 @@ span {
 .mat-mdc-card{
     margin: auto;
 }
+
+.btn-success {
+  background-color: #4caf50!important; /* verde material */
+  color: white!important;
+  width: 40%;
+  align-self: end;
+}
+
+.btn-success:hover {
+  background-color: #43a047!important;
+}

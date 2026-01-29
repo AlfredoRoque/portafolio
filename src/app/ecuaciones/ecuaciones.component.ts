@@ -27,6 +27,8 @@ export class EcuacionesComponent implements OnInit {
     mensaje: null
   };
   loading = false;
+  rutaArchivo = 'https://raw.githubusercontent.com/AlfredoRoque/Sistema-de-Ecuaciones/e76041f7b58f40751354ead2fe89a53c31f97272/out/artifacts/Sistema_de_Ecuaciones_jar/Sistema-de-Ecuaciones.jar';
+
   request: EcuacionRequest = {
     xvalueFields: [],
     yvalueFields: [],
@@ -195,4 +197,16 @@ export class EcuacionesComponent implements OnInit {
       control?.updateValueAndValidity();
     });
   }
+
+  descargarVersionEscritorio() {
+
+    const link = document.createElement('a');
+    link.href = this.rutaArchivo;
+    link.download = 'Sistema-de-Ecuaciones.jar';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
 }

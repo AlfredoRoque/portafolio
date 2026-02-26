@@ -18,6 +18,8 @@ export class MenuComponent implements OnInit {
   }
 
   proyects:ProyectData[] = [
+    new ProyectData('https://github.com/AlfredoRoque/balances-dialisis-app','https://gestor-balances.rorideas.com/', '../../assets/images/balance-dialisis-front.png', 'Gestor de Balances de Diálisis'),
+    new ProyectData('https://github.com/AlfredoRoque/gestor-balances-dialisis','https://api-sistema-ecuaciones-production-3ffb.up.railway.app/swagger-ui/index.html', '../../assets/images/balance-dialisis-back.png', 'API de Balances de Diálisis'),
     new ProyectData('https://github.com/AlfredoRoque/webpag','https://landing-page.rorideas.com/', '../../assets/images/webcamp.PNG', 'Landing Page WebCamp'),
     new ProyectData('','https://siaf.puebla.gob.mx/','../../assets/images/siaf.PNG', 'SIAF Puebla'),
     new ProyectData('https://github.com/AlfredoRoque/CryptoCoins/tree/main','https://crypto.rorideas.com/','../../assets/images/crypto.PNG', 'Crypto Coins'),

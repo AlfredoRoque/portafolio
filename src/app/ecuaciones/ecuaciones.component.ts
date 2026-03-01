@@ -7,36 +7,36 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EcuacionesService } from '../services/ecuaciones.service';
-import { EcuacionResponse, EcuacionRequest } from '../models/ecuacion.models';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { ResultadoDialogComponent } from '../resultado-dialog/resultado-dialog.component';
+import { SistemaEcuacionesService } from '../services/SistemaEcuacionesService';
+import { SistemaEcuacionResponseDto, SistemaEcuacionRequestDto } from '../models/SistemaEcuacionDto';
 
 @Component({
   selector: 'app-ecuaciones',
   standalone: true,
   imports: [CommonModule, RouterModule, ReactiveFormsModule,
-     MatInputModule, MatRadioModule, MatButtonModule, MatCardModule, MatDialogModule,ResultadoDialogComponent],
+     MatInputModule, MatRadioModule, MatButtonModule, MatCardModule, MatDialogModule],
   templateUrl: './ecuaciones.component.html',
   styleUrls: ['./ecuaciones.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class EcuacionesComponent implements OnInit {
 
-  resultado: EcuacionResponse = {
-    mensaje: null
+  resultado: SistemaEcuacionResponseDto = {
+    message: ''
   };
   loading = false;
   rutaArchivo = 'https://raw.githubusercontent.com/AlfredoRoque/Sistema-de-Ecuaciones/e76041f7b58f40751354ead2fe89a53c31f97272/out/artifacts/Sistema_de_Ecuaciones_jar/Sistema-de-Ecuaciones.jar';
 
-  request: EcuacionRequest = {
+  request: SistemaEcuacionRequestDto = {
     xvalueFields: [],
     yvalueFields: [],
     zvalueFields: [],
     resFields: []
   };
   systemForm: FormGroup;
-  constructor(private fb: FormBuilder, private ecuacionesService: EcuacionesService,private dialog: MatDialog) {
+  constructor(private fb: FormBuilder, private ecuacionesService: SistemaEcuacionesService,private dialog: MatDialog) {
     this.systemForm = this.fb.group({
       type: ['2x2', Validators.required],
       method: ['sustitucion', Validators.required],
@@ -70,63 +70,37 @@ export class EcuacionesComponent implements OnInit {
     this.loading = true;
     const payload = this.buildPayload();
 
-    console.log('Payload para resolver el sistema de ecuaciones:', payload);
-
     this.resolverSistemaEcuaciones(payload);
   }
 
-  resolverSistemaEcuaciones(payload: EcuacionRequest) {
+  resolverSistemaEcuaciones(payload: SistemaEcuacionRequestDto) {
     switch (this.systemForm.value.method) {
       case 'sustitucion':
         if (this.systemForm.value.type === '2x2') {
-          this.ecuacionesService.sustitucion2x2(payload)
-            .subscribe(res => {
-              this.responseHandler(res);
-            });
+           this.responseHandler(this.ecuacionesService.sustitucion2x2(payload));
         } else {
-          this.ecuacionesService.sustitucion3x3(payload)
-            .subscribe(res => {
-              this.responseHandler(res);
-            });
+           this.responseHandler(this.ecuacionesService.sustitucion3x3(payload));
         }
         break;
       case 'suma_resta':
         if (this.systemForm.value.type === '2x2') {
-          this.ecuacionesService.sumaresta2x2(payload)
-            .subscribe(res => {
-              this.responseHandler(res);
-            });
+           this.responseHandler(this.ecuacionesService.sumayrestaReduccion2x2(payload));
         } else {
-          this.ecuacionesService.sumaresta3x3(payload)
-            .subscribe(res => {
-                this.responseHandler(res);
-            });
+          this.responseHandler(this.ecuacionesService.sumayrestaReduccion3x3(payload));
         }
         break;
       case 'determinantes':
         if (this.systemForm.value.type === '2x2') {
-          this.ecuacionesService.determinante2x2(payload)
-            .subscribe(res => {
-              this.responseHandler(res);
-            });
+          this.responseHandler(this.ecuacionesService.determinantes2x2(payload));
         } else {
-          this.ecuacionesService.determinante3x3(payload)
-            .subscribe(res => {
-              this.responseHandler(res);
-            });
+          this.responseHandler(this.ecuacionesService.determinantes3x3(payload));
         }
         break;
       case 'igualacion':
         if (this.systemForm.value.type === '2x2') {
-          this.ecuacionesService.igualacion2x2(payload)
-            .subscribe(res => {
-              this.responseHandler(res);
-            });
+          this.responseHandler(this.ecuacionesService.igualacion2x2(payload));
         } else {
-          this.ecuacionesService.igualacion3x3(payload)
-            .subscribe(res => {
-              this.responseHandler(res);
-            });
+          this.responseHandler(this.ecuacionesService.igualacion3x3(payload));
         }
         break;
       // Implementar otros métodos aquí
@@ -134,7 +108,7 @@ export class EcuacionesComponent implements OnInit {
         console.error('Método no soportado');
     }
   }
-  responseHandler(res: EcuacionResponse) {
+  responseHandler(res: SistemaEcuacionResponseDto) {
     const mensaje = this.formatResult(res);
     this.loading = false;
     this.dialog.open(ResultadoDialogComponent, {
@@ -161,8 +135,8 @@ export class EcuacionesComponent implements OnInit {
     return this.request;
   }
 
-  formatResult(raw: EcuacionResponse): string {
-    return raw.mensaje.replace(/\n/g, '<br><br>');
+  formatResult(raw: SistemaEcuacionResponseDto): string {
+    return raw.message.replace(/\n/g, '<br><br>');
   }
 
   applyValidators(type: '2x2' | '3x3'): void {

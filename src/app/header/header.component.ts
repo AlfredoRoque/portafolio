@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
 
   link.target = '_blank';
   link.href =
-    'https://drive.google.com/u/0/uc?id=14vCT8m2qgVvG2d6OxyJPsVNT7YWUzz67&export=download';
+    'https://drive.google.com/u/0/uc?id=1cmO4pmtOCq6mJ9H4XQtoX3LGJa_b-6-Q&export=download';
   link.download = 'C.V.pdf';
 }
 }
